@@ -26,8 +26,7 @@ func ReadConfig() error {
 		fmt.Println(err)
 		return err
 	}
-	config = &configStruct{}
-	err = json.Unmarshal(file, config)
+	err = json.Unmarshal(file, &config)
 	if err != nil {
 		fmt.Println(config)
 		fmt.Print(string(file))
